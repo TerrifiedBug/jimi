@@ -133,6 +133,9 @@ def typeCast(varString,dicts={},functionSafeList=functionSafeList):
             return True
         if lower == "false":
             return False
+        # None
+        if lower == "none":
+            return None
         # Dict
         if regexDict.search(varString):
             return getDictValue(varString,dicts)
